@@ -1,0 +1,75 @@
+﻿# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+ 
+127.0.0.1 lm.licenses.adobe.com 
+127.0.0.1 lmlicenses.wip4.adobe.com 
+127.0.0.1 lm-prd-da1.licenses.adobe.com 
+127.0.0.1 activate.adobe.com 
+127.0.0.1 activate.wip4.adobe.com 
+127.0.0.1 practivate.adobe.com 
+127.0.0.1 practivate-da1.adobe.com 
+127.0.0.1 na1r.services.adobe.com 
+127.0.0.1 hlrcv.stage.adobe.com 
+127.0.0.1 uds.licenses.adobe.com 
+127.0.0.1 licenses.adobe.com 
+127.0.0.1 license.adobe.com 
+127.0.0.1 helpexamples.com 
+127.0.0.1 activate-sea.adobe.com 
+127.0.0.1 activate-sjc0.adobe.com 
+127.0.0.1 ereg.adobe.com 
+127.0.0.1 activate.adobe.com 
+127.0.0.1 na1r.services.adobe.com 
+127.0.0.1 activate.wip3.adobe.com 
+127.0.0.1 wip3.adobe.com 
+127.0.0.1 ereg.wip3.adobe.com 
+127.0.0.1 wwis-dubc1-vip60.adobe.com 
+127.0.0.1 genuine.adobe.com 
+127.0.0.1 prod.adobegenuine.com 
+127.0.0.1 platform.wondershare.com 
+127.0.0.1 activation.cyberlink.com 
+127.0.0.1 pc-api.wondershare.cc 
+#127.0.0.1 dynamic-eus-rs.wondershare.com 
+127.0.0.1 analytics.wondershare.cc 
+#127.0.0.1 cloud-api.wondershare.cc  
+127.0.0.1 sparrow.wondershare.com 
+#127.0.0.1 api.wondershare.cc 
+127.0.0.1 wae.wondershare.cc 
+127.0.0.1 cbs.wondershare.com 
+#127.0.0.1 filstock-api-eus.wondershare.cc 
+127.0.0.1 api.wondershare.com  
+127.0.0.1 antipiracy.wondershare.com  
+127.0.0.1 wondershare.com 
+#127.0.0.1 dc-static-wondershare.com 
+#127.0.0.1 filmstock.wondershare.com 
+#127.0.0.1 effects.wondersharecom.com 
+127.0.0.1 mail.insidews.wondershare.com 
+127.0.0.1 accounts.wondershare.com
+# Added by Docker Desktop
+192.168.100.80 host.docker.internal
+192.168.100.80 gateway.docker.internal
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
+
+# WebPrakerja
+127.0.0.1 webprakerja.local
+
