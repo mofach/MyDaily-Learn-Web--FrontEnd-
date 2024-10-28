@@ -1,0 +1,125 @@
+header {
+  display: inline;
+}
+/* Container grid untuk jumbotron */
+.jumbotron-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 40px;
+  background-color: #030637;
+  margin: 0;
+  margin: auto;
+}
+
+/* Gaya untuk gambar logo di kiri */
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Ukuran gambar logo */
+.left img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* Gaya untuk baris di sebelah kanan */
+.top {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+nav {
+  padding: 5px;
+  background-color: #030637;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: #910a67;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th {
+  background-color: #030637;
+  color: #910a67;
+  border: 1px solid #910a67;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  border: 1.5px solid #910a67;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #910a67; /* Warna saat baris di-hover */
+  color: white;
+}
+
+.custom-table th:hover {
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  color: #910a67;
+  background-color: #030637;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .jumbotron-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 20px;
+  }
+  .left {
+    grid-row: auto;
+  }
+}
