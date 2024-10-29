@@ -57,17 +57,23 @@
         </p>
         <div>
           <h2 class="mb-4">User Registration Form</h2>
-          <form action="#" method="POST" class="row g-3">
-            <!-- Personal Information Section -->
-            <h4>Personal Information</h4>
+          <form
+            action="submit.php"
+            method="POST"
+            class="row g-3"
+            enctype="multipart/form-data"
+          >
+            <!-- Account Section -->
+            <h4>Account Section</h4>
             <div class="col-md-6">
-              <label for="username" class="form-label">Full Name</label>
+              <label for="username" class="form-label">Username</label>
               <input
                 type="text"
                 class="form-control"
                 id="username"
                 name="username"
-                placeholder="aqilmf"
+                placeholder="Enter username"
+                pattern="^\S*$"
                 required
               />
             </div>
@@ -78,7 +84,7 @@
                 class="form-control"
                 id="email"
                 name="email"
-                placeholder="aqil@email.com"
+                placeholder="example@email.com"
                 required
               />
             </div>
@@ -90,18 +96,9 @@
                 id="phone"
                 name="phone"
                 placeholder="0822-5520-1106"
+                required
               />
             </div>
-            <div class="col-md-6">
-              <label for="gender" class="form-label">Gender</label><br />
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Female</label>
-            </div>
-
-            <!-- Account Information Section -->
-            <h4 class="mt-4">Account Information</h4>
             <div class="col-md-6">
               <label for="password" class="form-label">Password</label>
               <input
@@ -112,6 +109,94 @@
                 required
               />
             </div>
+
+            <!-- Identity Section -->
+            <h4 class="mt-4">Identity Section</h4>
+            <div class="col-md-6">
+              <label for="fullname" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fullname"
+                name="fullname"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="nik" class="form-label">NIK</label>
+              <input
+                type="number"
+                class="form-control"
+                id="nik"
+                name="nik"
+                placeholder="Enter NIK"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="gender" class="form-label">Gender</label><br />
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                required
+              />
+              <label for="male">Male</label>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                required
+              />
+              <label for="female">Female</label>
+            </div>
+            <div class="col-md-6">
+              <label for="bloodtype" class="form-label">Blood Type</label><br />
+              <input type="radio" id="a" name="bloodtype" value="A" required />
+              <label for="a">A</label>
+              <input type="radio" id="b" name="bloodtype" value="B" required />
+              <label for="b">B</label>
+              <input
+                type="radio"
+                id="ab"
+                name="bloodtype"
+                value="AB"
+                required
+              />
+              <label for="ab">AB</label>
+              <input type="radio" id="o" name="bloodtype" value="O" required />
+              <label for="o">O</label>
+            </div>
+            <div class="col-md-6">
+              <label for="birthdate" class="form-label">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="birthdate"
+                name="birthdate"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="religion" class="form-label">Religion</label>
+              <select
+                class="form-control"
+                id="religion"
+                name="religion"
+                required
+              >
+                <option value="">Select Religion</option>
+                <option value="Islam">Islam</option>
+                <option value="Protestan">Protestan</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Budha">Budha</option>
+                <option value="Konghucu">Konghucu</option>
+              </select>
+            </div>
             <div class="col-md-6">
               <label for="profile-pic" class="form-label"
                 >Profile Picture</label
@@ -121,72 +206,9 @@
                 class="form-control"
                 id="profile-pic"
                 name="profile-pic"
+                accept="image/*"
+                required
               />
-            </div>
-            <input type="hidden" name="userid" value="12345" />
-
-            <!-- Preferences Section -->
-            <h4 class="mt-4">Preferences</h4>
-            <div class="col-md-6">
-              <label for="favcolor" class="form-label">Favorite Color</label>
-              <input
-                type="color"
-                class="form-control form-control-color"
-                id="favcolor"
-                name="favcolor"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="birthdate" class="form-label">Date of Birth</label>
-              <input
-                type="date"
-                class="form-control"
-                id="birthdate"
-                name="birthdate"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="appointment" class="form-label"
-                >Appointment Date & Time</label
-              >
-              <input
-                type="datetime-local"
-                class="form-control"
-                id="appointment"
-                name="appointment"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="website" class="form-label">Personal Website</label>
-              <input
-                type="url"
-                class="form-control"
-                id="website"
-                name="website"
-                placeholder="https://email.com"
-              />
-            </div>
-            <div class="col-md-12">
-              <label for="range" class="form-label">Satisfaction Level</label>
-              <input
-                type="range"
-                class="form-range"
-                id="range"
-                name="satisfaction"
-                min="0"
-                max="10"
-              />
-            </div>
-            <div class="col-12">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="newsletter"
-                name="newsletter"
-              />
-              <label for="newsletter" class="form-check-label"
-                >Subscribe to newsletter</label
-              >
             </div>
 
             <!-- Submit and Reset Buttons -->
@@ -301,10 +323,43 @@
       </div>
       <br />
 
-      <div id="dynamic-table" class="content" style="display: none">
+      <!-- DYNAMIC TABLE -->
+
+      <div
+        id="dynamic-table"
+        class="content container mt-5"
+        style="display: none"
+      >
         <h2>Dynamic Table Content</h2>
-        <p>Ini adalah konten Dynamic Table.</p>
-        <p>COMING SOON</p>
+        <p>
+          HTML tables allow web developers to arrange data into rows and
+          columns.
+        </p>
+        <p style="color: red">
+          <strong>Note : </strong>Please activate xampp phpmyadmin and its
+          database to use this table
+        </p>
+        <div class="table-container">
+          <table class="table custom-table table-striped rounded">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Full Name</th>
+                <th>NIK</th>
+                <th>Gender</th>
+                <th>Blood Type</th>
+                <th>Birthdate</th>
+                <th>Religion</th>
+                <th>Profile Picture</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody">
+              <!-- Data will be populated here -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
     <footer>&copy; 2024, Aqil MF</footer>
