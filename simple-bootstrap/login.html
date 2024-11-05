@@ -1,39 +1,180 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - SIAKAD UTB</title>
+    <title>SIAKAD UTB > Login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/Logo.png" type="image/png">
+    <style>
+      .password-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      #password {
+        width: 100%;
+      }
+      #togglePassword {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: gray;
+        background: transparent;
+        border: none;
+      }
+      #togglePassword:focus {
+        outline: none;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="login-form mt-5 p-4 rounded bg-light shadow-sm">
-        <h3 class="text-center mb-3">Login SIAKAD UTB</h3>
-        <form action="user-dashboard.html">
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" id="username" class="form-control" required />
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/Logo.png"
+            alt="UTB Logo"
+            width="40"
+            class="me-2"
+          />
+          <span>SIAKAD UTB</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section
+      class="d-flex align-items-center justify-content-center"
+      style="min-height: 80vh"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-lg p-4 animate__animated animate__fadeIn">
+              <div class="card-body">
+                <h2 class="card-title text-center text-primary mb-4">
+                  Welcome Back UTBers!
+                </h2>
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label for="nim" class="form-label">NIM</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nim"
+                      placeholder="Enter your NIM"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="password-wrapper">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                      />
+                      <button
+                        type="button"
+                        id="togglePassword"
+                        aria-label="Toggle Password Visibility"
+                      >
+                        <i class="bi bi-eye-slash-fill" id="eyeIcon"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-grid">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block animate__animated animate__fadeInUp animate__delay-1s"
+                      id="loginButton"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </form>
+                <p class="text-center mt-3">
+                  Don't have an account?
+                  <a href="register.html" class="text-primary">Register here</a>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-        <p class="text-center mt-3">
-          Belum punya akun? <a href="register.html">Daftar Sekarang</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section text-light bg-primary py-4">
+      <div class="container text-center">
+        <p class="mb-0">
+          © 2024 SIAKAD UTB - Aqil Muhammad Fachrezi. All rights reserved.
         </p>
       </div>
-    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Icon for password visibility toggle -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const nimInput = document.getElementById("nim");
+        const passwordInput = document.getElementById("password");
+        const togglePasswordButton = document.getElementById("togglePassword");
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        // NIM input: Only accept numeric input up to 11 digits
+        nimInput.addEventListener("input", function () {
+          nimInput.value = nimInput.value.replace(/\D/g, "").slice(0, 11);
+        });
+
+        // Toggle password visibility on mousedown and mouseup
+        togglePasswordButton.addEventListener("mousedown", function () {
+          passwordInput.type = "text";
+          eyeIcon.classList.replace("bi-eye-slash-fill", "bi-eye-fill");
+        });
+
+        togglePasswordButton.addEventListener("mouseup", function () {
+          passwordInput.type = "password";
+          eyeIcon.classList.replace("bi-eye-fill", "bi-eye-slash-fill");
+        });
+
+        togglePasswordButton.addEventListener("mouseleave", function () {
+          passwordInput.type = "password";
+          eyeIcon.classList.replace("bi-eye-fill", "bi-eye-slash-fill");
+        });
+
+        // Redirect to user-menu.html on successful form submission
+        const loginForm = document.getElementById("loginForm");
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent actual form submission
+          window.location.href = "user-menu.html"; // Redirect to user-menu.html
+        });
+      });
+    </script>
   </body>
 </html>

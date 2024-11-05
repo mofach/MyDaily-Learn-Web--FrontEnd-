@@ -1,80 +1,303 @@
-<!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register - SIAKAD UTB</title>
+    <title>SIAKAD UTB > Register</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/Logo.png" type="image/png">
+    <style>
+      .password-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      #password {
+        width: 100%;
+      }
+      #togglePassword {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: gray;
+        background: transparent;
+        border: none;
+      }
+      #togglePassword:focus {
+        outline: none;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="register-form mt-5 p-4 rounded bg-light shadow-sm">
-        <h3 class="text-center mb-3">Register SIAKAD UTB</h3>
-        <form action="user-dashboard.html">
-          <div class="mb-3">
-            <label for="fullname" class="form-label">Nama Lengkap</label>
-            <input type="text" id="fullname" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="nim" class="form-label">NIM</label>
-            <input
-              type="text"
-              id="nim"
-              class="form-control"
-              required
-              maxlength="11"
-              pattern="\d{11}"
-              title="NIM harus 11 digit angka"
-            />
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Gender</label>
-            <div>
-              <input
-                type="radio"
-                id="male"
-                name="gender"
-                value="male"
-                required
-              />
-              <label for="male">Laki-laki</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Perempuan</label>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/Logo.png"
+            alt="UTB Logo"
+            width="40"
+            class="me-2"
+          />
+          <span>SIAKAD UTB</span>
+        </a>
+      </div>
+    </nav>
+    <!-- Register Section -->
+    <section
+      class="d-flex align-items-center justify-content-center"
+      style="min-height: 80vh; margin: 36px"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-lg p-4 animate__animated animate__fadeIn">
+              <div class="card-body">
+                <h2 class="card-title text-center text-primary mb-4">
+                  Welcome UTBers!
+                </h2>
+                <form id="registerForm">
+                  <div class="mb-3">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullname"
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="nim" class="form-label">NIM</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nim"
+                      placeholder="Enter your NIM"
+                      required
+                      maxlength="11"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="password-wrapper">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                        maxlength="12"
+                      />
+                      <button
+                        type="button"
+                        id="togglePassword"
+                        aria-label="Toggle Password Visibility"
+                      >
+                        <i class="bi bi-eye-slash-fill" id="eyeIcon"></i>
+                      </button>
+                    </div>
+                    <small class="text-muted">
+                      Password must be 6-12 characters, including uppercase, lowercase, number, and symbol.
+                    </small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="birthdate" class="form-label">Birthdate</label>
+                    <input type="date" class="form-control" id="birthdate" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Gender</label><br />
+                    <input type="radio" name="gender" value="Male" /> Male
+                    <input type="radio" name="gender" value="Female" /> Female
+                  </div>
+                  <div class="mb-3">
+                    <label for="major" class="form-label">Major</label>
+                    <select class="form-select" id="major">
+                      <option value="industrial_engineering">
+                        Industrial Engineering
+                      </option>
+                      <option value="informatics_engineering">
+                        Informatics Engineering
+                      </option>
+                      <option value="visual_communication_design">
+                        Visual Communication Design
+                      </option>
+                      <option value="digital_business">Digital Business</option>
+                      <option value="retail_management">
+                        Retail Management
+                      </option>
+                    </select>
+                  </div>
+                  <div class="d-grid">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block animate__animated animate__fadeInUp animate__delay-1s"
+                      id="registerButton"
+                      disabled
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+                <p class="text-center mt-3">
+                  Already have an account?
+                  <a href="login.html" class="text-primary">Login here</a>
+                </p>
+              </div>
             </div>
           </div>
-          <div class="mb-3">
-            <label for="major" class="form-label">Jurusan</label>
-            <select id="major" class="form-select" required>
-              <option value="">Pilih Jurusan</option>
-              <option value="TI">Teknik Informatika</option>
-              <option value="DKV">Desain Komunikasi Visual</option>
-              <option value="TI">Teknik Industri</option>
-              <option value="BD">Bisnis Digital</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Daftar</button>
-        </form>
-        <p class="text-center mt-3">
-          Sudah punya akun? <a href="login.html">Login</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section text-light bg-primary py-4">
+      <div class="container text-center">
+        <p class="mb-0">
+          © 2024 SIAKAD UTB - Aqil Muhammad Fachrezi. All rights reserved.
         </p>
       </div>
-    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Icon for password visibility toggle -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const nimInput = document.getElementById("nim");
+        const passwordInput = document.getElementById("password");
+        const registerButton = document.getElementById("registerButton");
+        const togglePasswordButton = document.getElementById("togglePassword");
+        const eyeIcon = document.getElementById("eyeIcon");
+        const registerForm = document.getElementById("registerForm");
+        const fullnameInput = document.getElementById("fullname");
+        const emailInput = document.getElementById("email");
+        const birthdateInput = document.getElementById("birthdate");
+        const genderInputs = document.getElementsByName("gender");
+        const majorSelect = document.getElementById("major");
+
+        // NIM input: Only accept numeric input up to 11 digits
+        nimInput.addEventListener("input", function () {
+          nimInput.value = nimInput.value.replace(/\D/g, "");
+          if (nimInput.value.length > 11) {
+            nimInput.value = nimInput.value.slice(0, 11);
+          }
+          validateForm();
+        });
+
+        // Password input: Enforce 6-12 characters, uppercase, lowercase, number, and symbol
+        passwordInput.addEventListener("input", function () {
+          if (passwordInput.value.length > 12) {
+            passwordInput.value = passwordInput.value.slice(0, 12);
+          }
+          validateForm();
+        });
+
+        // Toggle password visibility on mousedown and mouseup
+        togglePasswordButton.addEventListener("mousedown", function () {
+          passwordInput.type = "text";
+          eyeIcon.classList.replace("bi-eye-slash-fill", "bi-eye-fill");
+        });
+
+        togglePasswordButton.addEventListener("mouseup", function () {
+          passwordInput.type = "password";
+          eyeIcon.classList.replace("bi-eye-fill", "bi-eye-slash-fill");
+        });
+
+        togglePasswordButton.addEventListener("mouseleave", function () {
+          passwordInput.type = "password";
+          eyeIcon.classList.replace("bi-eye-fill", "bi-eye-slash-fill");
+        });
+
+        // Validate the form and enable/disable the register button
+        function validateForm() {
+          const fullnameValid = fullnameInput.value.trim() !== "";
+          const emailValid = emailInput.value.trim() !== "";
+          const birthdateValid = birthdateInput.value !== "";
+          const genderValid = Array.from(genderInputs).some(
+            (input) => input.checked
+          );
+          const majorValid = majorSelect.value !== "";
+
+          const nimValid = nimInput.value.length === 11;
+          const passwordValid = isPasswordValid(passwordInput.value);
+
+          // Enable button if all validations pass
+          registerButton.disabled = !(
+            fullnameValid &&
+            emailValid &&
+            birthdateValid &&
+            genderValid &&
+            majorValid &&
+            nimValid &&
+            passwordValid
+          );
+        }
+
+        // Check if password meets the requirements
+        function isPasswordValid(password) {
+          const minLength = 6;
+          const maxLength = 12;
+          const hasUpperCase = /[A-Z]/.test(password);
+          const hasLowerCase = /[a-z]/.test(password);
+          const hasNumber = /\d/.test(password);
+          const hasSymbol = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+          return (
+            password.length >= minLength &&
+            password.length <= maxLength &&
+            hasUpperCase &&
+            hasLowerCase &&
+            hasNumber &&
+            hasSymbol
+          );
+        }
+
+        //Another Input Validation
+        [fullnameInput, emailInput, birthdateInput, majorSelect].forEach(
+          (input) => {
+            input.addEventListener("input", validateForm);
+          }
+        );
+
+        genderInputs.forEach((input) => {
+          input.addEventListener("change", validateForm);
+        });
+
+        // Redirect to user-menu.html on successful form submission
+        registerForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent actual form submission
+          if (!registerButton.disabled) {
+            window.location.href = "user-menu.html"; // Redirect to user-menu.html
+          }
+        });
+      });
+    </script>
   </body>
 </html>
