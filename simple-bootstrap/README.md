@@ -1,6 +1,6 @@
 # SIAKAD UTB Web Design Project
 
-This is a sample project for a SIAKAD (Sistem Informasi Akademik) website, created for the *Web Programming 1* course assignment by Ms. Nova Agustina, M.Kom, at the Universitas Teknologi Bandung (UTB), specifically for the Information Technology Department in the 5th semester. This project utilizes the Bootstrap CSS framework and includes the following main pages:
+This is a sample project for a SIAKAD (Sistem Informasi Akademik) website, created by Aqil Muhammad Fachrezi for the *Web Programming 1* course assignment by Ms. Nova Agustina, M.Kom, at the Universitas Teknologi Bandung (UTB), specifically for the Information Technology Department in the 5th semester. This project utilizes the Bootstrap CSS framework and includes the following main pages:
 
 - **Homepage**: A landing page with general site information.
 - **Login Page**: For user authentication.
