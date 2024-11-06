@@ -10,15 +10,16 @@ This is a sample project for a SIAKAD (Sistem Informasi Akademik) website, creat
 ## Task Details
 
 1. **Research on Bootstrap**: Students are instructed to study the Bootstrap framework using resources such as [W3Schools Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4) or [PetaKode's Bootstrap Guide](https://www.petanikode.com/bootstrap4-pemula/).
+   The complete answer is in the [AboutBootstrap.md](https://github.com/mofach/MyDaily-Learn-Web--FrontEnd-/blob/main/simple-bootstrap/AboutBootstrap.md) file
 
-2. **Project Requirements**:
+3. **Project Requirements**:
    - Design a sample website using Bootstrap, containing at least the following pages:
      - Homepage
      - Login Page
      - Register Page
      - User Dashboard
 
-3. **Submission**: Students are required to push this project to a Git repository and submit the repository link through the Edlink platform.
+4. **Submission**: Students are required to push this project to a Git repository and submit the repository link through the Edlink platform.
 
 ## Project Structure
 
