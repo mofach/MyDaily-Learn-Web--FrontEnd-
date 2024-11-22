@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fach Tech Solution - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style-index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-laptop-code"></i> Fach Tech Solution
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Innovative IT Solutions for Your Business</h1>
+      <p>
+        Empowering your business with state-of-the-art technology solutions.
+      </p>
+      <button
+        type="button"
+        class="btn btn-lg btn-light btn-outline-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#authModal"
+      >
+        Explore Services
+      </button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5">
+      <div class="text-center mb-5">
+        <h2>Our Services</h2>
+        <p>We provide a wide range of IT solutions to meet your needs.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img
+              src="assets/images/web-dev.png"
+              class="card-img-top"
+              alt="Web Development"
+              style="height: 228px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">
+                Creating responsive and functional websites tailored to your
+                business.
+              </p>
+              <a href="detail-web-dev.html" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img
+              src="assets/images/app-dev.png"
+              class="card-img-top"
+              alt="App Development"
+              style="height: 228px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">App Development</h5>
+              <p class="card-text">
+                Custom mobile applications designed for your business goals.
+              </p>
+              <a href="detail-app-dev.html" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img
+              src="assets/images/cloud.png"
+              class="card-img-top"
+              alt="Cloud Services"
+              style="height: 228px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cloud Solutions</h5>
+              <p class="card-text">
+                Reliable and scalable cloud solutions for your IT
+                infrastructure.
+              </p>
+              <a href="detail-cloud.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="bg-light py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="assets/images/about.png"
+              class="img-fluid rounded"
+              alt="About Us"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2>About Fach Tech Solution</h2>
+            <p>
+              At Fach Tech Solution, we are dedicated to providing top-notch IT
+              solutions to businesses of all sizes. Our team of experts ensures
+              innovative and effective strategies to help you achieve your
+              goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Contact Us</h2>
+          <p>Have questions? Get in touch with us today!</p>
+        </div>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="my-3">
+            <textarea
+              class="form-control"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div class="text-center mb-4 mt-4">
+          <h2>OR</h2>
+          <p>Reach Us At:</p>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <a href="https://github.com/mofach" target="_blank"
+              ><img
+                src="assets/images/github-sign.png"
+                alt="github"
+                style="height: 75px; width: 75px"
+            /></a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.instagram.com/aqilmfach_/" target="_blank"
+              ><img
+                src="assets/images/instagram.png"
+                alt="instagram"
+                style="height: 75px; width: 75px"
+            /></a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://www.linkedin.com/in/aqil-muhammad-fachrezi-5852892a7/"
+              target="_blank"
+              ><img
+                src="assets/images/linkedin.png"
+                alt="linkedin"
+                style="height: 75px; width: 75px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div
+      class="modal fade"
+      id="authModal"
+      tabindex="-1"
+      aria-labelledby="authModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="authModalLabel">
+              Welcome to Fach Tech Solution
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <p>Please log in or register to explore our services further.</p>
+            <div class="d-grid gap-2">
+              <a href="login.html" class="btn btn-success btn-lg">Login</a>
+              <a href="register.html" class="btn btn-secondary btn-lg"
+                >Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p>&copy; 2024 Fach Tech Solution. All Rights Reserved.</p>
+        <p>@Copyright by 22552011065_AqilMuhammadFachrezi_TIF222CNS</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
